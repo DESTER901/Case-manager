@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Administrador de casos - Backoffice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/backoffice.png" type="image/png">
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Administrador de casos</h1>
+    </header>
+    <div class="main_container">
+      <div class="actions">
+          <button id="btn-new-bbdd">Agregar Caso BBDD</button>
+          <button id="btn-new-ticket">Agregar Caso Ticket</button>
+          <button id="btn-import">Importar TXT</button>
+          <button id="btn-export">Exportar TXT</button>
+          <input type="file" id="file-input" accept=".txt" hidden />
+      </div>
+    </div>
+
+
+    <main>
+      <section id="cases-container" class="cases-grid">
+        <!-- Cards dinámicas -->
+      </section>
+    </main>
+    <div id="modal-overlay" class="hidden">
+      <div class="modal">
+        <h2 id="modal-title"></h2>
+        <form id="case-form">
+          <div id="form-fields"></div>
+          <div class="modal-actions">
+            <button type="submit">Guardar</button>
+            <button type="button" id="btn-cancel">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
